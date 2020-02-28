@@ -1,11 +1,11 @@
 package com.example.concordia_campus_guide.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -52,10 +52,12 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id == R.id.search){
-            //TODO onClick of search button
-            Toast.makeText(getApplicationContext(), "You clicked search!", Toast.LENGTH_SHORT).show();
+            //TODO onClick of search_activity button
+            Intent openSearch = new Intent(MainActivity.this,
+                    SearchActivity.class);
+            startActivity(openSearch);
+            return false;
         }
-
         return true;
     }
 
