@@ -8,18 +8,18 @@ import java.util.List;
 
 public class Buildings {
 
-    private List<Building> Buildings;
+    private List<Building> BuildingsList;
 
     public Buildings(){
-        Buildings = new ArrayList<Building>();
+        BuildingsList = new ArrayList<Building>();
     }
 
-    public List<Building> getBuildings(){
-        return Buildings;
+    public List<Building> getBuildingsList(){
+        return BuildingsList;
     }
 
     public Building getBuilding(String buildingCode){
-        for(Building building: Buildings){
+        for(Building building: BuildingsList){
             if(building.getBuildingCode().equals(buildingCode)){
                 return building;
             }
@@ -27,12 +27,12 @@ public class Buildings {
         return null;
     }
 
-    public Buildings(List<Building> buildings){
-        this.Buildings = buildings;
+    public Buildings(List<Building> buildingsList){
+        this.BuildingsList = buildingsList;
     }
 
-    public void setBuildings(List<Building> buildings){
-        this.Buildings = buildings;
+    public void setBuildingsList(List<Building> buildingsList){
+        this.BuildingsList = buildingsList;
     }
 
     public JSONObject getGeoJson(){
@@ -52,7 +52,7 @@ public class Buildings {
         JSONArray features = new JSONArray();
 
         try{
-            for(Building building: Buildings){
+            for(Building building: BuildingsList){
                 JSONObject buildingGeoJson = building.getGeoJson();
                 if(buildingGeoJson!=null) features.put(building.getGeoJson());
             }
