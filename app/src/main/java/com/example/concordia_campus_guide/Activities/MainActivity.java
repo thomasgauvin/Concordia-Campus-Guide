@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id == R.id.search){
-            //TODO onClick of search_activity button
+            //TODO onClick of activity_search button
             Intent openSearch = new Intent(MainActivity.this,
                     SearchActivity.class);
             startActivity(openSearch);
