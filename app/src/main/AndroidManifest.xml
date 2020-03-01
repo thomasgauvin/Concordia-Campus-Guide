@@ -13,17 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Activities.MainActivity">
-        <activity android:name=".Activities.SearchActivity"></activity>
-        <activity
-            android:name=".Activities.RoutesActivity"
-            android:label="@string/title_activity_routes"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activities.SearchActivity" />
+        <activity
+            android:name=".Activities.RoutesActivity"
+            android:label="@string/title_activity_routes"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
