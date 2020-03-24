@@ -25,7 +25,7 @@ sonarqube {
         property "sonar.test.inclusions", "**/*Test*/**"
         property "sonar.sourceEncoding", "UTF-8"
         property "sonar.sources", "src/main/java"
-        property 'sonar.coverage.exclusions', ["**/Activities/**", "**/Adapters/**", "**/Database/Daos/**", "**/Global/**", "**/*Fragment.java", "**/ClassConstants.*", '**/TransitType.*']
+        property 'sonar.coverage.exclusions', ["**/Activities/*Activity.*", "**/Adapters/**", "**/Database/Daos/**", "**/Global/**", "**/*Fragment.java", "**/ClassConstants.*", '**/TransitType.*']
     }
 }
 allprojects {
