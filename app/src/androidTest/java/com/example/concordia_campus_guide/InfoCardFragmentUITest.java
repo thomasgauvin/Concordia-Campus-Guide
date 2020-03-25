@@ -25,14 +25,16 @@
 //import org.junit.runner.RunWith;
 //
 //import static androidx.test.espresso.Espresso.onView;
+//import static androidx.test.espresso.action.ViewActions.click;
 //import static androidx.test.espresso.assertion.ViewAssertions.matches;
 //import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 //import static androidx.test.espresso.matcher.ViewMatchers.withId;
+//import static androidx.test.espresso.matcher.ViewMatchers.withText;
 //import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 //import static org.hamcrest.Matchers.allOf;
 //
 //@RunWith(AndroidJUnit4.class)
-//public class InfoCardFragmentUITest {
+////public class InfoCardFragmentUITest {
 //
 //    private UiDevice device;
 //
@@ -55,6 +57,15 @@
 //     */
 //    @Test
 //    public void collapsedInfoCardPopsUpWhenMarkerIsClickedTest() throws UiObjectNotFoundException, InterruptedException {
+//        ViewInteraction materialButton = onView(
+//                allOf(withId(R.id.SGWBtn), withText("SGW"),
+//                        childAtPosition(
+//                                childAtPosition(
+//                                        withId(R.id.locationFragment),
+//                                        1),
+//                                0),
+//                        isDisplayed()));
+//        materialButton.perform(click());
 //        UiObject marker = device.findObject(new UiSelector().descriptionContains("EV"));
 //        marker.click();
 //        Thread.sleep(1500);
@@ -78,6 +89,15 @@
 //     */
 //    @Test
 //    public void collapedInfoCardContainsDirectionsButtonTest() throws UiObjectNotFoundException, InterruptedException {
+//        ViewInteraction materialButton = onView(
+//                allOf(withId(R.id.SGWBtn), withText("SGW"),
+//                        childAtPosition(
+//                                childAtPosition(
+//                                        withId(R.id.locationFragment),
+//                                        1),
+//                                0),
+//                        isDisplayed()));
+//        materialButton.perform(click());
 //        UiObject marker = device.findObject(new UiSelector().descriptionContains("EV"));
 //        marker.click();
 //        Thread.sleep(1500);
@@ -100,6 +120,15 @@
 //     */
 //    @Test
 //    public void collapsedInfoCardContainsIndoorMapButtonTest() throws UiObjectNotFoundException, InterruptedException {
+//        ViewInteraction materialButton = onView(
+//                allOf(withId(R.id.SGWBtn), withText("SGW"),
+//                        childAtPosition(
+//                                childAtPosition(
+//                                        withId(R.id.locationFragment),
+//                                        1),
+//                                0),
+//                        isDisplayed()));
+//        materialButton.perform(click());
 //        UiObject marker = device.findObject(new UiSelector().descriptionContains("EV"));
 //        marker.click();
 //        Thread.sleep(1500);
