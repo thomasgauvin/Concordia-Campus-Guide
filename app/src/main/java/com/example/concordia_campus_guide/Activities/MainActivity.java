@@ -14,7 +14,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.concordia_campus_guide.BuildConfig;
 import com.example.concordia_campus_guide.Database.AppDatabase;
 import com.example.concordia_campus_guide.Fragments.InfoCardFragment.InfoCardFragment;
 import com.example.concordia_campus_guide.Fragments.LocationFragment.LocationFragment;
@@ -97,7 +96,20 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.add(R.id.bottom_card_frame, infoCardFragment);
         fragmentTransaction.commit();
 
+        (findViewById(R.id.bottom_card_frame)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(swipeableInfoCard.getState() != BottomSheetBehavior.STATE_EXPANDED)
+                    swipeableInfoCard.setState(BottomSheetBehavior.STATE_EXPANDED);
+                else
+                    swipeableInfoCard.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            }
+        });
+
         swipeableInfoCard.setState(BottomSheetBehavior.STATE_COLLAPSED);
+    }
+
+    public void clickInfoCard(){
 
     }
 
@@ -106,6 +118,16 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.bottom_card_frame, poiFragment);
         fragmentTransaction.commit();
+
+        (findViewById(R.id.bottom_card_frame)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(swipeableInfoCard.getState() != BottomSheetBehavior.STATE_EXPANDED)
+                    swipeableInfoCard.setState(BottomSheetBehavior.STATE_EXPANDED);
+                else
+                    swipeableInfoCard.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            }
+        });
 
         swipeableInfoCard.setState(BottomSheetBehavior.STATE_COLLAPSED);
         swipeableInfoCard.setPeekHeight(180);
